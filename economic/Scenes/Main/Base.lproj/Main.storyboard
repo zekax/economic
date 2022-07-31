@@ -257,6 +257,9 @@
                             <constraint firstItem="O3n-VG-1Ve" firstAttribute="top" secondItem="yfu-kF-Pch" secondAttribute="bottom" constant="20" id="gUz-Ji-kXM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="capturedImage" destination="O3n-VG-1Ve" id="TTZ-iP-kbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAk-nB-cHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

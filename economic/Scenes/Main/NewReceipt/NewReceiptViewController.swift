@@ -9,6 +9,9 @@ import UIKit
 
 class NewReceiptViewController: UIViewController {
 
+    var viewModel: NewReceiptViewModel!
+    @IBOutlet weak var capturedImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
