@@ -11,7 +11,6 @@
 		AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF20E2896DB0E00B1BFDB /* SceneDelegate.swift */; };
 		AC2DF2112896DB0E00B1BFDB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2102896DB0E00B1BFDB /* MainViewController.swift */; };
 		AC2DF2142896DB0E00B1BFDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2DF2122896DB0E00B1BFDB /* Main.storyboard */; };
-		AC2DF2172896DB0E00B1BFDB /* economic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2152896DB0E00B1BFDB /* economic.xcdatamodeld */; };
 		AC2DF2192896DB1000B1BFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2DF2182896DB1000B1BFDB /* Assets.xcassets */; };
 		AC2DF21C2896DB1000B1BFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2DF21A2896DB1000B1BFDB /* LaunchScreen.storyboard */; };
 		AC2DF2272896DB1000B1BFDB /* economicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2262896DB1000B1BFDB /* economicTests.swift */; };
@@ -19,6 +18,10 @@
 		AC2DF2332896DB1000B1BFDB /* economicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2322896DB1000B1BFDB /* economicUITestsLaunchTests.swift */; };
 		AC2DF2472896E57100B1BFDB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2462896E57100B1BFDB /* UIView+Extensions.swift */; };
 		AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */; };
+		AC2DF24D2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24B2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld */; };
+		AC2DF2502896FAE200B1BFDB /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */; };
+		AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */; };
+		AC2DF2762897015A00B1BFDB /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2752897015900B1BFDB /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		AC2DF20E2896DB0E00B1BFDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC2DF2102896DB0E00B1BFDB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC2DF2132896DB0E00B1BFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC2DF2162896DB0E00B1BFDB /* economic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = economic.xcdatamodel; sourceTree = "<group>"; };
 		AC2DF2182896DB1000B1BFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2DF21B2896DB1000B1BFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC2DF21D2896DB1000B1BFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		AC2DF2322896DB1000B1BFDB /* economicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = economicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AC2DF2462896E57100B1BFDB /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		AC2DF24C2896F90000B1BFDB /* ReceiptsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptsModel.xcdatamodel; sourceTree = "<group>"; };
+		AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC2DF2752897015900B1BFDB /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		AC2DF20B2896DB0E00B1BFDB /* economic */ = {
 			isa = PBXGroup;
 			children = (
+				AC2DF24A2896F8D600B1BFDB /* Data */,
 				AC2DF2452896E53600B1BFDB /* Extensions */,
 				AC2DF2422896E04700B1BFDB /* Main */,
 				AC2DF23F2896E00100B1BFDB /* Scenes */,
@@ -179,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				AC2DF21D2896DB1000B1BFDB /* Info.plist */,
-				AC2DF2152896DB0E00B1BFDB /* economic.xcdatamodeld */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -190,6 +196,17 @@
 				AC2DF2462896E57100B1BFDB /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC2DF24A2896F8D600B1BFDB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */,
+				AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */,
+				AC2DF24B2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld */,
+				AC2DF2752897015900B1BFDB /* PersistenceService.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,10 +342,13 @@
 			files = (
 				AC2DF2112896DB0E00B1BFDB /* MainViewController.swift in Sources */,
 				AC2DF20D2896DB0E00B1BFDB /* AppDelegate.swift in Sources */,
+				AC2DF2502896FAE200B1BFDB /* Receipt+CoreDataClass.swift in Sources */,
 				AC2DF2472896E57100B1BFDB /* UIView+Extensions.swift in Sources */,
-				AC2DF2172896DB0E00B1BFDB /* economic.xcdatamodeld in Sources */,
+				AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */,
 				AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */,
 				AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */,
+				AC2DF2762897015A00B1BFDB /* PersistenceService.swift in Sources */,
+				AC2DF24D2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,13 +692,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AC2DF2152896DB0E00B1BFDB /* economic.xcdatamodeld */ = {
+		AC2DF24B2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AC2DF2162896DB0E00B1BFDB /* economic.xcdatamodel */,
+				AC2DF24C2896F90000B1BFDB /* ReceiptsModel.xcdatamodel */,
 			);
-			currentVersion = AC2DF2162896DB0E00B1BFDB /* economic.xcdatamodel */;
-			path = economic.xcdatamodeld;
+			currentVersion = AC2DF24C2896F90000B1BFDB /* ReceiptsModel.xcdatamodel */;
+			path = ReceiptsModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -1,9 +1,8 @@
 //
-//  ExtendedView.swift
-//  DomusHunt
+//  UIView+Extensions.swift
+//  economic
 //
-//  Created by José Guilherme on 18/03/2019.
-//  Copyright © 2019 HHSurge. All rights reserved.
+//  Created by José Rodrigues on 31/07/2022.
 //
 
 import UIKit
