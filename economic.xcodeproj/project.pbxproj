@@ -25,6 +25,8 @@
 		AC2DF2792897061400B1BFDB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2782897061400B1BFDB /* Coordinator.swift */; };
 		AC2DF27B2897082700B1BFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */; };
 		AC2DF27D28970A7000B1BFDB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF27C28970A7000B1BFDB /* AppCoordinator.swift */; };
+		AC2DF27F289748F000B1BFDB /* NewReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF27E289748F000B1BFDB /* NewReceiptViewController.swift */; };
+		AC2DF2812897491B00B1BFDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		AC2DF2782897061400B1BFDB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		AC2DF27C28970A7000B1BFDB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AC2DF27E289748F000B1BFDB /* NewReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReceiptViewController.swift; sourceTree = "<group>"; };
+		AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 				AC2DF2102896DB0E00B1BFDB /* MainViewController.swift */,
 				AC2DF2122896DB0E00B1BFDB /* Main.storyboard */,
 				AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */,
+				AC2DF27E289748F000B1BFDB /* NewReceiptViewController.swift */,
+				AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -367,6 +373,8 @@
 				AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */,
 				AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */,
 				AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */,
+				AC2DF27F289748F000B1BFDB /* NewReceiptViewController.swift in Sources */,
+				AC2DF2812897491B00B1BFDB /* DetailsViewController.swift in Sources */,
 				AC2DF2762897015A00B1BFDB /* PersistenceService.swift in Sources */,
 				AC2DF24D2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld in Sources */,
 			);
@@ -545,9 +553,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 32E57N6GQV;
+				DEVELOPMENT_TEAM = 4Y5TAD9W5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = economic/Main/Config/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -573,9 +582,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 32E57N6GQV;
+				DEVELOPMENT_TEAM = 4Y5TAD9W5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = economic/Main/Config/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
