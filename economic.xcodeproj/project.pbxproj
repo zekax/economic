@@ -101,14 +101,8 @@
 		AC2DF20B2896DB0E00B1BFDB /* economic */ = {
 			isa = PBXGroup;
 			children = (
-				AC2DF20C2896DB0E00B1BFDB /* AppDelegate.swift */,
-				AC2DF20E2896DB0E00B1BFDB /* SceneDelegate.swift */,
-				AC2DF2102896DB0E00B1BFDB /* ViewController.swift */,
-				AC2DF2122896DB0E00B1BFDB /* Main.storyboard */,
-				AC2DF2182896DB1000B1BFDB /* Assets.xcassets */,
-				AC2DF21A2896DB1000B1BFDB /* LaunchScreen.storyboard */,
-				AC2DF21D2896DB1000B1BFDB /* Info.plist */,
-				AC2DF2152896DB0E00B1BFDB /* economic.xcdatamodeld */,
+				AC2DF2422896E04700B1BFDB /* Main */,
+				AC2DF23F2896E00100B1BFDB /* Scenes */,
 			);
 			path = economic;
 			sourceTree = "<group>";
@@ -128,6 +122,60 @@
 				AC2DF2322896DB1000B1BFDB /* economicUITestsLaunchTests.swift */,
 			);
 			path = economicUITests;
+			sourceTree = "<group>";
+		};
+		AC2DF23F2896E00100B1BFDB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF2412896E03300B1BFDB /* Launch */,
+				AC2DF2402896E00A00B1BFDB /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AC2DF2402896E00A00B1BFDB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF2102896DB0E00B1BFDB /* ViewController.swift */,
+				AC2DF2122896DB0E00B1BFDB /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AC2DF2412896E03300B1BFDB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF21A2896DB1000B1BFDB /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		AC2DF2422896E04700B1BFDB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF2442896E09200B1BFDB /* Config */,
+				AC2DF2432896E08600B1BFDB /* Resources */,
+				AC2DF20C2896DB0E00B1BFDB /* AppDelegate.swift */,
+				AC2DF20E2896DB0E00B1BFDB /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AC2DF2432896E08600B1BFDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF2182896DB1000B1BFDB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC2DF2442896E09200B1BFDB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF21D2896DB1000B1BFDB /* Info.plist */,
+				AC2DF2152896DB0E00B1BFDB /* economic.xcdatamodeld */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
