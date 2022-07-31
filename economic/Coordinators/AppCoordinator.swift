@@ -9,14 +9,13 @@ import Foundation
 import UIKit
 
 class AppCoordinator{
-    var navigationController: UINavigationController = UINavigationController()
     var mainCoordinator: MainCoordinator?
     var window: UIWindow?
                  
     func start() {
-            self.mainCoordinator = MainCoordinator()
-            mainCoordinator?.start()
-            self.window?.rootViewController = mainCoordinator?.mainController
+        self.mainCoordinator = MainCoordinator()
+        mainCoordinator?.start()
+        self.window?.rootViewController = mainCoordinator?.mainController
     }
     
     // MARK: - Init

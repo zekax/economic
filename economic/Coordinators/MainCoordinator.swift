@@ -10,9 +10,7 @@ import UIKit
 
 class MainCoordinator: Coordinator{
     
-    
     var mainController: MainViewController
-    var navigationController: UINavigationController = UINavigationController()
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
     init(){
