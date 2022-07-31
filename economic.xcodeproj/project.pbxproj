@@ -22,6 +22,9 @@
 		AC2DF2502896FAE200B1BFDB /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */; };
 		AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */; };
 		AC2DF2762897015A00B1BFDB /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2752897015900B1BFDB /* PersistenceService.swift */; };
+		AC2DF2792897061400B1BFDB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2782897061400B1BFDB /* Coordinator.swift */; };
+		AC2DF27B2897082700B1BFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */; };
+		AC2DF27D28970A7000B1BFDB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF27C28970A7000B1BFDB /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC2DF2752897015900B1BFDB /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		AC2DF2782897061400B1BFDB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AC2DF27C28970A7000B1BFDB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		AC2DF20B2896DB0E00B1BFDB /* economic */ = {
 			isa = PBXGroup;
 			children = (
+				AC2DF277289705FB00B1BFDB /* Coordinators */,
 				AC2DF24A2896F8D600B1BFDB /* Data */,
 				AC2DF2452896E53600B1BFDB /* Extensions */,
 				AC2DF2422896E04700B1BFDB /* Main */,
@@ -207,6 +214,16 @@
 				AC2DF2752897015900B1BFDB /* PersistenceService.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		AC2DF277289705FB00B1BFDB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF2782897061400B1BFDB /* Coordinator.swift */,
+				AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */,
+				AC2DF27C28970A7000B1BFDB /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,10 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2DF27D28970A7000B1BFDB /* AppCoordinator.swift in Sources */,
 				AC2DF2112896DB0E00B1BFDB /* MainViewController.swift in Sources */,
 				AC2DF20D2896DB0E00B1BFDB /* AppDelegate.swift in Sources */,
+				AC2DF2792897061400B1BFDB /* Coordinator.swift in Sources */,
 				AC2DF2502896FAE200B1BFDB /* Receipt+CoreDataClass.swift in Sources */,
 				AC2DF2472896E57100B1BFDB /* UIView+Extensions.swift in Sources */,
+				AC2DF27B2897082700B1BFDB /* MainCoordinator.swift in Sources */,
 				AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */,
 				AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */,
 				AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */,
@@ -530,7 +550,7 @@
 				INFOPLIST_FILE = economic/Main/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -558,7 +578,7 @@
 				INFOPLIST_FILE = economic/Main/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

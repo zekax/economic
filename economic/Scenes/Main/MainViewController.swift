@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    weak var coordinator: MainCoordinator?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
