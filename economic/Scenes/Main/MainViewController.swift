@@ -35,25 +35,10 @@ class MainViewController: UIViewController{
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            
             self.coordinator?.navigateToNew(image: image)
-//            savePNGImage(image: image)
-//            coordinator.navigateToNewReceipt
         }
         self.dismiss(animated: true, completion: nil);
     }
     
-    func savePNGImage(image: UIImage)-> String{
-        
-        let filename:String = UUID().uuidString + ".png"
-        
-        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        
-        let fileURL = URL(fileURLWithPath: documentDirectory).appendingPathComponent(filename)
-        
-        let data = image.pngData()
-        try? data?.write(to: fileURL)
-        
-        return filename
-    }
+    
 }

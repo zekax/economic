@@ -160,7 +160,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="88-88-8888" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-gV-ot9">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-gV-ot9">
                                                 <rect key="frame" x="264" y="472" width="130" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="DM8-fm-Ljh"/>
@@ -178,7 +178,7 @@
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKm-8O-fcH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKm-8O-fcH">
                                                 <rect key="frame" x="264" y="448" width="130" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,7 +242,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Whu-mf-ZK8"/>
                                                 </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -351,6 +350,7 @@
                         <outlet property="currencyTxtFld" destination="Zcu-gY-Mmd" id="hSG-tt-o84"/>
                         <outlet property="dateTxtFld" destination="Lyi-gV-ot9" id="y3M-J9-TQX"/>
                         <outlet property="descriptionTxtFld" destination="vlS-MZ-lRI" id="kPh-GV-Wr5"/>
+                        <outlet property="keyboardHeightLayoutConstraint" destination="rTI-uq-lHE" id="nKN-uM-qZv"/>
                         <outlet property="titleTxtFld" destination="ci3-tD-GVZ" id="LaE-iR-hcy"/>
                         <outlet property="typeTxtFld" destination="3EA-3v-nWM" id="gBk-qc-dmv"/>
                         <outlet property="valueTxtFld" destination="vPh-Hg-qG7" id="Bi3-uC-dJS"/>
