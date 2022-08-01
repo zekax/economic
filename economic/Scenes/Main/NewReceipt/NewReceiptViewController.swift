@@ -13,6 +13,13 @@ class NewReceiptViewController: UIViewController {
     weak var coordinator: MainCoordinator?
     
     @IBOutlet weak var capturedImage: UIImageView!
+    @IBOutlet weak var titleTxtFld: UITextField!
+    
+    @IBOutlet weak var typeTxtFld: UITextField!
+    @IBOutlet weak var dateTxtFld: UITextField!
+    @IBOutlet weak var valueTxtFld: UITextField!
+    @IBOutlet weak var currencyTxtFld: UITextField!
+    @IBOutlet weak var descriptionTxtFld: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +28,6 @@ class NewReceiptViewController: UIViewController {
     }
     
     @IBAction func touchSaveButton(_ sender: Any) {
+        
     }
 }
