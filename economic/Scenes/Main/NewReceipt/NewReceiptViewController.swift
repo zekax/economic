@@ -7,6 +7,15 @@
 
 import UIKit
 
+enum receiptType: String, CaseIterable{
+    case none = "None"
+    case travel = "Travel"
+    case shopping = "Shopping"
+    case groceries = "Groceries"
+    case other = "Other"
+    
+}
+
 class NewReceiptViewController: UIViewController {
 
     var viewModel: NewReceiptViewModel!
@@ -21,6 +30,9 @@ class NewReceiptViewController: UIViewController {
     @IBOutlet weak var currencyTxtFld: UITextField!
     @IBOutlet weak var descriptionTxtFld: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var typePicker: UIPickerView!
+    
+    var pickerData = [String]()
     
     @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint!
     
@@ -34,6 +46,32 @@ class NewReceiptViewController: UIViewController {
         
         capturedImage.image = viewModel.image
         setDatePicker()
+        setTypePicker()
+        setCurrency()
+    }
+    
+    func setCurrency(){
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = Locale.current
+        
+        currencyTxtFld.text = currencyFormatter.currencyCode
+    }
+    
+    
+    func setTypePicker(){
+        typeTxtFld.text = receiptType.none.rawValue
+        typeTxtFld.inputView = typePicker
+        
+        typePicker.delegate = self
+        let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.donePickerPressed))
+        let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        toolbar.setItems([doneBtn], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        toolbar.sizeToFit()
+        
+        typeTxtFld.inputAccessoryView = toolbar
     }
     
     func setDatePicker(){
@@ -90,5 +128,22 @@ class NewReceiptViewController: UIViewController {
                             self.view.layoutIfNeeded()},
                            completion: nil)
         }
+    }
+}
+
+extension NewReceiptViewController: UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return receiptType.allCases.count
+    }
+}
+
+extension NewReceiptViewController: UIPickerViewDelegate{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        typeTxtFld.text = receiptType.allCases[row].rawValue
+        return receiptType.allCases[row].rawValue
     }
 }

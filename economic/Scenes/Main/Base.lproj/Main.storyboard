@@ -167,7 +167,7 @@
                                                     <constraint firstAttribute="width" constant="130" id="ebc-0b-dsb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="date-time"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-2Z-3oe">
                                                 <rect key="frame" x="20" y="382" width="32" height="20"/>
@@ -207,7 +207,7 @@
                                                     <constraint firstAttribute="height" constant="34" id="ZRR-LA-RSr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zcu-gY-Mmd">
                                                 <rect key="frame" x="170" y="538" width="68" height="34"/>
@@ -353,11 +353,16 @@
                         <outlet property="descriptionTxtFld" destination="vlS-MZ-lRI" id="kPh-GV-Wr5"/>
                         <outlet property="keyboardHeightLayoutConstraint" destination="rTI-uq-lHE" id="nKN-uM-qZv"/>
                         <outlet property="titleTxtFld" destination="ci3-tD-GVZ" id="LaE-iR-hcy"/>
+                        <outlet property="typePicker" destination="0lS-SZ-Wxl" id="JHf-RV-gGd"/>
                         <outlet property="typeTxtFld" destination="3EA-3v-nWM" id="gBk-qc-dmv"/>
                         <outlet property="valueTxtFld" destination="vPh-Hg-qG7" id="Bi3-uC-dJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAk-nB-cHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="0lS-SZ-Wxl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </pickerView>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="tfy-zI-qJB">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>

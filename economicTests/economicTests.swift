@@ -30,6 +30,13 @@ class economicTests: XCTestCase {
         let image = Utils.loadPNGImage(filename: "matchpitch.png")
         XCTAssertNotNil(image)
     }
+    
+    func testCurrency() throws {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = Locale.current
+        
+        print(currencyFormatter.currencyCode)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
