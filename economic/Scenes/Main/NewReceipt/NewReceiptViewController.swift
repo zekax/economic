@@ -31,8 +31,7 @@ class NewReceiptViewController: UIViewController {
     @IBOutlet weak var descriptionTxtFld: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var typePicker: UIPickerView!
-    
-    var pickerData = [String]()
+    @IBOutlet weak var currencyPicker: UIPickerView!
     
     @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint!
     
@@ -47,37 +46,32 @@ class NewReceiptViewController: UIViewController {
         capturedImage.image = viewModel.image
         setDatePicker()
         setTypePicker()
-        setCurrency()
+        setCurrencyPicker()
     }
     
-    func setCurrency(){
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.locale = Locale.current
+    func setCurrencyPicker(){
+        currencyPicker.delegate = self
         
-        currencyTxtFld.text = currencyFormatter.currencyCode
+        currencyTxtFld.text = viewModel.selectedCurrency.code + " " + viewModel.selectedCurrency.symbol
+        currencyTxtFld.inputView = currencyPicker
+        currencyTxtFld.inputAccessoryView = getPickerToolbar()
     }
-    
     
     func setTypePicker(){
+        typePicker.delegate = self
+        
         typeTxtFld.text = receiptType.none.rawValue
         typeTxtFld.inputView = typePicker
-        
-        typePicker.delegate = self
-        let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.donePickerPressed))
-        let toolbar = UIToolbar()
-        toolbar.barStyle = .default
-        toolbar.isTranslucent = true
-        toolbar.setItems([doneBtn], animated: false)
-        toolbar.isUserInteractionEnabled = true
-        toolbar.sizeToFit()
-        
-        typeTxtFld.inputAccessoryView = toolbar
+        typeTxtFld.inputAccessoryView = getPickerToolbar()
     }
     
     func setDatePicker(){
         dateTxtFld.text = viewModel.date.formatted(date: .numeric, time: .shortened)
         dateTxtFld.inputView = datePicker
-        
+        dateTxtFld.inputAccessoryView = getPickerToolbar()
+    }
+    
+    func getPickerToolbar() -> UIToolbar{
         let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.donePickerPressed))
         let toolbar = UIToolbar()
         toolbar.barStyle = .default
@@ -86,7 +80,7 @@ class NewReceiptViewController: UIViewController {
         toolbar.isUserInteractionEnabled = true
         toolbar.sizeToFit()
         
-        dateTxtFld.inputAccessoryView = toolbar
+        return toolbar
     }
     
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer)
@@ -101,6 +95,7 @@ class NewReceiptViewController: UIViewController {
                                       
     @objc func donePickerPressed(_ sender: Any)
     {
+        currencyTxtFld.text = viewModel.selectedCurrency.code + " " + viewModel.selectedCurrency.symbol
         self.view.endEditing(true)
     }
     
@@ -137,13 +132,27 @@ extension NewReceiptViewController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == currencyPicker{
+            return Currency.allCurrencies.count
+        }
+        
+        //default-typePicker
         return receiptType.allCases.count
     }
 }
 
 extension NewReceiptViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if pickerView == currencyPicker{
+            viewModel.selectedCurrency = Currency.allCurrencies[row]
+//            currencyTxtFld.text = viewModel.selectedCurrency.code + " " + viewModel.selectedCurrency.symbol
+            return "\(Currency.allCurrencies[row].name) :: \(Currency.allCurrencies[row].code) :: \(Currency.allCurrencies[row].symbol)"
+        }
+        
+        //default-typePicker
         typeTxtFld.text = receiptType.allCases[row].rawValue
         return receiptType.allCases[row].rawValue
     }
 }
+

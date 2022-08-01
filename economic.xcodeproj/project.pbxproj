@@ -29,6 +29,7 @@
 		AC2DF2812897491B00B1BFDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */; };
 		AC2DF28428974A9E00B1BFDB /* NewReceptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF28328974A9E00B1BFDB /* NewReceptViewModel.swift */; };
 		ACCA5133289826500090A866 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5132289826500090A866 /* Utils.swift */; };
+		ACCA513528984D470090A866 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513428984D470090A866 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		AC2DF28328974A9E00B1BFDB /* NewReceptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReceptViewModel.swift; sourceTree = "<group>"; };
 		ACCA5132289826500090A866 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		ACCA513428984D470090A866 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCA5132289826500090A866 /* Utils.swift */,
+				ACCA513428984D470090A866 /* Currency.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */,
 				AC2DF27F289748F000B1BFDB /* NewReceiptViewController.swift in Sources */,
 				AC2DF28428974A9E00B1BFDB /* NewReceptViewModel.swift in Sources */,
+				ACCA513528984D470090A866 /* Currency.swift in Sources */,
 				AC2DF2812897491B00B1BFDB /* DetailsViewController.swift in Sources */,
 				AC2DF2762897015A00B1BFDB /* PersistenceService.swift in Sources */,
 				AC2DF24D2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld in Sources */,
@@ -633,14 +637,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 32E57N6GQV;
+				DEVELOPMENT_TEAM = 4Y5TAD9W5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jose.economicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -653,14 +661,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 32E57N6GQV;
+				DEVELOPMENT_TEAM = 4Y5TAD9W5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jose.economicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

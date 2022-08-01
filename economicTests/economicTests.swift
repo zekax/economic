@@ -36,6 +36,11 @@ class economicTests: XCTestCase {
         currencyFormatter.locale = Locale.current
         
         print(currencyFormatter.currencyCode)
+        
+        print(currencyFormatter.currencySymbol)
+        
+        print(Currency.allCurrencies)
+        XCTAssertNotNil(currencyFormatter)
     }
 
     func testPerformanceExample() throws {

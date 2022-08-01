@@ -161,10 +161,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-gV-ot9">
-                                                <rect key="frame" x="264" y="472" width="130" height="34"/>
+                                                <rect key="frame" x="244" y="472" width="150" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="DM8-fm-Ljh"/>
-                                                    <constraint firstAttribute="width" constant="130" id="ebc-0b-dsb"/>
+                                                    <constraint firstAttribute="width" constant="150" id="ebc-0b-dsb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="date-time"/>
@@ -179,7 +179,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKm-8O-fcH">
-                                                <rect key="frame" x="264" y="448" width="130" height="20"/>
+                                                <rect key="frame" x="244" y="448" width="150" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -210,16 +210,16 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zcu-gY-Mmd">
-                                                <rect key="frame" x="170" y="538" width="68" height="34"/>
+                                                <rect key="frame" x="170" y="538" width="98" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="68" id="cXv-Bj-Y4P"/>
+                                                    <constraint firstAttribute="width" constant="98" id="cXv-Bj-Y4P"/>
                                                     <constraint firstAttribute="height" constant="34" id="hbf-2F-6m7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EA-3v-nWM">
-                                                <rect key="frame" x="20" y="472" width="224" height="34"/>
+                                                <rect key="frame" x="20" y="472" width="204" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="IMo-gS-pYd"/>
                                                 </constraints>
@@ -347,6 +347,7 @@
                     </view>
                     <connections>
                         <outlet property="capturedImage" destination="qOM-lc-1G3" id="ih3-J7-AbQ"/>
+                        <outlet property="currencyPicker" destination="iNu-2L-ZpI" id="n0N-P9-Z77"/>
                         <outlet property="currencyTxtFld" destination="Zcu-gY-Mmd" id="hSG-tt-o84"/>
                         <outlet property="datePicker" destination="tfy-zI-qJB" id="RX4-mO-2pg"/>
                         <outlet property="dateTxtFld" destination="Lyi-gV-ot9" id="y3M-J9-TQX"/>
@@ -359,7 +360,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAk-nB-cHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pickerView contentMode="scaleToFill" id="0lS-SZ-Wxl">
+                <pickerView contentMode="scaleToFill" id="0lS-SZ-Wxl" userLabel="Type Picker View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </pickerView>
+                <pickerView contentMode="scaleToFill" id="iNu-2L-ZpI" userLabel="Currency Picker View">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 </pickerView>

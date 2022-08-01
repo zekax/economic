@@ -12,8 +12,12 @@ import CoreData
 class NewReceiptViewModel{
     
     var image: UIImage
-    
     var date = Date()
+    var selectedCurrency: Currency = {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = Locale.current
+        return Currency(name: Locale.current.localizedString(forCurrencyCode: currencyFormatter.currencyCode) ?? String(), code: currencyFormatter.currencyCode, symbol: currencyFormatter.currencySymbol)
+    }()
     
     init(image: UIImage){
         self.image = image
