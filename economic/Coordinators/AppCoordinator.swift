@@ -15,7 +15,7 @@ class AppCoordinator{
     func start() {
         self.mainCoordinator = MainCoordinator()
         mainCoordinator?.start()
-        self.window?.rootViewController = mainCoordinator?.mainController
+        self.window?.rootViewController = mainCoordinator?.navigationController
     }
     
     // MARK: - Init

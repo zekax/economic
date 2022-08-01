@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdA-jp-1jq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,33 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Receipts-->
+        <scene sceneID="rMj-97-MZT">
+            <objects>
+                <navigationController title="Receipts" id="CdA-jp-1jq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AhJ-sf-W9l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w4l-rY-MxQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzj-a6-fiu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="98"/>
+        </scene>
+        <!--Receipts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainView" id="BYZ-38-t0r" customClass="MainViewController" customModule="economic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainView" title="Receipts" id="BYZ-38-t0r" customClass="MainViewController" customModule="economic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2b-Js-Z3N">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Receipts" id="Otk-2d-ZbS">
-                                        <barButtonItem key="rightBarButtonItem" title="Add" id="vYJ-Lg-G7O">
-                                            <connections>
-                                                <action selector="touchAddButton:" destination="BYZ-38-t0r" id="FEv-ZE-BVh"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="apC-mI-Trc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="h63-GY-6i5" customClass="MainTableViewCell" customModule="economic" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiptlistcell" rowHeight="100" id="h63-GY-6i5" customClass="MainTableViewCell" customModule="economic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h63-GY-6i5" id="9hp-ML-dfS">
@@ -109,14 +111,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="apC-mI-Trc" secondAttribute="trailing" id="1Kt-ka-lOi"/>
-                            <constraint firstItem="L2b-Js-Z3N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vjc-es-Mol"/>
+                            <constraint firstItem="apC-mI-Trc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6un-9G-ThA"/>
                             <constraint firstItem="apC-mI-Trc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XzZ-xt-Wui"/>
-                            <constraint firstItem="L2b-Js-Z3N" firstAttribute="trailing" secondItem="apC-mI-Trc" secondAttribute="trailing" id="d2T-ps-bhm"/>
+                            <constraint firstItem="apC-mI-Trc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZAU-FH-f3H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="apC-mI-Trc" secondAttribute="bottom" id="kha-qa-cJ3"/>
-                            <constraint firstItem="L2b-Js-Z3N" firstAttribute="leading" secondItem="apC-mI-Trc" secondAttribute="leading" id="ldf-kH-au1"/>
-                            <constraint firstItem="apC-mI-Trc" firstAttribute="top" secondItem="L2b-Js-Z3N" secondAttribute="bottom" id="mLT-4k-9hh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Receipts" id="TF0-OW-GXi">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="vYJ-Lg-G7O">
+                            <connections>
+                                <action selector="touchAddButton:" destination="BYZ-38-t0r" id="FEv-ZE-BVh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="apC-mI-Trc" id="etG-uH-ppm"/>
                     </connections>
@@ -125,24 +132,16 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
-        <!--New Receipt View Controller-->
+        <!--New Receipt-->
         <scene sceneID="cpe-br-48O">
             <objects>
-                <viewController id="dJj-b3-ihW" customClass="NewReceiptViewController" customModule="economic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewReceipt" title="New Receipt" id="dJj-b3-ihW" customClass="NewReceiptViewController" customModule="economic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I03-sZ-YoI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfu-kF-Pch">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="New Receipt" id="AvH-DK-OAh"/>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O3n-VG-1Ve">
-                                <rect key="frame" x="20" y="108" width="374" height="350"/>
+                                <rect key="frame" x="20" y="64" width="374" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="saB-2g-LZz"/>
                                 </constraints>
@@ -243,18 +242,18 @@
                                 <rect key="frame" x="124" y="797" width="167" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                                <connections>
+                                    <action selector="touchSaveButton:" destination="dJj-b3-ihW" eventType="touchUpInside" id="t7X-Vh-di7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ASZ-o8-kc2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yfu-kF-Pch" firstAttribute="trailing" secondItem="ASZ-o8-kc2" secondAttribute="trailing" id="CO6-LD-fTa"/>
                             <constraint firstItem="ASZ-o8-kc2" firstAttribute="trailing" secondItem="O3n-VG-1Ve" secondAttribute="trailing" constant="20" id="Dql-uR-fKx"/>
                             <constraint firstItem="O3n-VG-1Ve" firstAttribute="leading" secondItem="ASZ-o8-kc2" secondAttribute="leading" constant="20" id="OXC-eH-3la"/>
-                            <constraint firstItem="yfu-kF-Pch" firstAttribute="top" secondItem="ASZ-o8-kc2" secondAttribute="top" id="VHF-Cw-p6o"/>
-                            <constraint firstItem="yfu-kF-Pch" firstAttribute="leading" secondItem="ASZ-o8-kc2" secondAttribute="leading" id="bNx-h7-6B0"/>
-                            <constraint firstItem="O3n-VG-1Ve" firstAttribute="top" secondItem="yfu-kF-Pch" secondAttribute="bottom" constant="20" id="gUz-Ji-kXM"/>
+                            <constraint firstItem="O3n-VG-1Ve" firstAttribute="top" secondItem="ASZ-o8-kc2" secondAttribute="top" constant="20" id="opr-Oa-fqv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -265,22 +264,14 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="97.767857142857139"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Details-->
         <scene sceneID="Rug-73-1s2">
             <objects>
-                <viewController id="PG4-Gw-yof" customClass="DetailsViewController" customModule="economic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Details" id="PG4-Gw-yof" customClass="DetailsViewController" customModule="economic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vDD-3V-JjE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-9X-gmt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Receipt Details" id="LFd-tm-cnD"/>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-Us-4Pl">
                                 <rect key="frame" x="20" y="166" width="374" height="350"/>
                                 <constraints>
@@ -326,9 +317,6 @@
                         <viewLayoutGuide key="safeArea" id="oc0-Xf-LOM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="z8e-9X-gmt" firstAttribute="top" secondItem="oc0-Xf-LOM" secondAttribute="top" id="9yY-zi-GFz"/>
-                            <constraint firstItem="z8e-9X-gmt" firstAttribute="trailing" secondItem="oc0-Xf-LOM" secondAttribute="trailing" id="B15-Ct-0jH"/>
-                            <constraint firstItem="z8e-9X-gmt" firstAttribute="leading" secondItem="oc0-Xf-LOM" secondAttribute="leading" id="Ovt-wL-cQz"/>
                             <constraint firstItem="oc0-Xf-LOM" firstAttribute="trailing" secondItem="G9G-Us-4Pl" secondAttribute="trailing" constant="20" id="SkJ-eo-EPX"/>
                             <constraint firstItem="G9G-Us-4Pl" firstAttribute="leading" secondItem="oc0-Xf-LOM" secondAttribute="leading" constant="20" id="gVe-jn-r9V"/>
                         </constraints>

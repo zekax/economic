@@ -35,6 +35,8 @@ class MainViewController: UIViewController{
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            
+            self.coordinator?.navigateToNew(image: image)
 //            savePNGImage(image: image)
 //            coordinator.navigateToNewReceipt
         }
