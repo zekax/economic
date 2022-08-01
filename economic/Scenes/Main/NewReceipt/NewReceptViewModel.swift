@@ -26,7 +26,7 @@ class NewReceiptViewModel{
         receipt.totalValue = value
         receipt.currency = currency
         receipt.details = description
-        receipt.imagePath = savePNGImage(image: image)
+        receipt.imagePath = Utils.savePNGImage(image: image)
         
         PersistenceService.saveContext()
         

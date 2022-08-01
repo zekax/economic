@@ -9,31 +9,35 @@ import Foundation
 import UIKit
 
 class Utils{
-    static func savePNGImage(image: UIImage)-> String{
-        
-        let filename:String = UUID().uuidString + ".png"
+    static func savePNGImage(image: UIImage, filename: String = (UUID().uuidString + ".png"))-> String{
         
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         
         let fileURL = URL(fileURLWithPath: documentDirectory).appendingPathComponent(filename)
         
         let data = image.pngData()
-        try? data?.write(to: fileURL)
         
-        return fileURL.absoluteString
+        do{
+            try data?.write(to: fileURL)
+        }catch{
+            return String()
+        }
+        
+        return filename
     }
     
-    static func loadPNGImage(path: String)-> UIImage{
-        
-        let filename:String = UUID().uuidString + ".png"
+    static func loadPNGImage(filename: String)-> UIImage?{
         
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         
         let fileURL = URL(fileURLWithPath: documentDirectory).appendingPathComponent(filename)
         
-        let data = image.pngData()
-        try? data?.write(to: fileURL)
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: fileURL.path) {
+            NSLog("FILE NOT AVAILABLE")
+            return nil
+        }
         
-        return fileURL.absoluteString
+        return UIImage(contentsOfFile: fileURL.path)
     }
 }
