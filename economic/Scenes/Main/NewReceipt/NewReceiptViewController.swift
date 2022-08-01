@@ -20,6 +20,7 @@ class NewReceiptViewController: UIViewController {
     @IBOutlet weak var valueTxtFld: UITextField!
     @IBOutlet weak var currencyTxtFld: UITextField!
     @IBOutlet weak var descriptionTxtFld: UITextView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint!
     
@@ -32,10 +33,35 @@ class NewReceiptViewController: UIViewController {
         self.view.addGestureRecognizer(tap)
         
         capturedImage.image = viewModel.image
-        dateTxtFld.text = Date().formatted(date: .numeric, time: .shortened)
+        setDatePicker()
+    }
+    
+    func setDatePicker(){
+        dateTxtFld.text = viewModel.date.formatted(date: .numeric, time: .shortened)
+        dateTxtFld.inputView = datePicker
+        
+        let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.donePickerPressed))
+        let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        toolbar.setItems([doneBtn], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        toolbar.sizeToFit()
+        
+        dateTxtFld.inputAccessoryView = toolbar
     }
     
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer)
+    {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        viewModel.date = sender.date
+        dateTxtFld.text = viewModel.date.formatted(date: .numeric, time: .shortened)
+    }
+                                      
+    @objc func donePickerPressed(_ sender: Any)
     {
         self.view.endEditing(true)
     }

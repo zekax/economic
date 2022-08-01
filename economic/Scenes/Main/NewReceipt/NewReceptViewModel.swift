@@ -13,6 +13,8 @@ class NewReceiptViewModel{
     
     var image: UIImage
     
+    var date = Date()
+    
     init(image: UIImage){
         self.image = image
     }
