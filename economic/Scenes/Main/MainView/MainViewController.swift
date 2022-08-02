@@ -26,8 +26,6 @@ class MainViewController: UIViewController{
     }
 
     @IBAction func touchAddButton(_ sender: Any) {
-        
-        self.coordinator?.navigateToNew(image: UIImage())
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
             self.imagePicker.sourceType = .camera;
             self.imagePicker.allowsEditing = true
