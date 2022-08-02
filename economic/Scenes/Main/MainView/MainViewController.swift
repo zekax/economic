@@ -26,8 +26,9 @@ class MainViewController: UIViewController{
     }
 
     @IBAction func touchAddButton(_ sender: Any) {
+        
+        self.coordinator?.navigateToNew(image: UIImage())
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
-            
             self.imagePicker.sourceType = .camera;
             self.imagePicker.allowsEditing = true
             self.present(self.imagePicker, animated: true, completion: nil)
@@ -59,11 +60,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "receiptlistcell", for: indexPath) as! MainTableViewCell
+        
         let receipt = viewModel.getReceipt(for: indexPath.row)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = receipt.currency
+        
         cell.titleLabel.text = receipt.title
         cell.dateLabel.text = receipt.date?.formatted(date: .numeric, time: .shortened)
         cell.typeLabel.text = receipt.type
-        cell.valueLabel.text = (receipt.totalValue?.description ?? "0") + receipt.currency!
+        cell.valueLabel.text = formatter.string(from: receipt.totalValue as NSNumber) //(receipt.totalValue.description) + receipt.currency!
         
         return cell
     }

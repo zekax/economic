@@ -21,7 +21,7 @@ extension Receipt {
     @NSManaged public var details: String?
     @NSManaged public var imagePath: String?
     @NSManaged public var title: String?
-    @NSManaged public var totalValue: NSDecimalNumber?
+    @NSManaged public var totalValue: Double
     @NSManaged public var type: String?
 
 }

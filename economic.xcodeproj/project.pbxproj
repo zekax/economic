@@ -32,6 +32,7 @@
 		ACCA513A2898A89C0090A866 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51392898A89C0090A866 /* MainViewModel.swift */; };
 		ACCA513D2898B3270090A866 /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513B2898B3270090A866 /* Receipt+CoreDataClass.swift */; };
 		ACCA513E2898B3270090A866 /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513C2898B3270090A866 /* Receipt+CoreDataProperties.swift */; };
+		ACCA51402899655C0090A866 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513F2899655C0090A866 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		ACCA51392898A89C0090A866 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		ACCA513B2898B3270090A866 /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ACCA513C2898B3270090A866 /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ACCA513F2899655C0090A866 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2DF2462896E57100B1BFDB /* UIView+Extensions.swift */,
+				ACCA513F2899655C0090A866 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCA51402899655C0090A866 /* String+Extensions.swift in Sources */,
 				AC2DF27D28970A7000B1BFDB /* AppCoordinator.swift in Sources */,
 				AC2DF2112896DB0E00B1BFDB /* MainViewController.swift in Sources */,
 				AC2DF20D2896DB0E00B1BFDB /* AppDelegate.swift in Sources */,
