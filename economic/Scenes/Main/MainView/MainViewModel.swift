@@ -27,12 +27,15 @@ class MainViewModel{
         let descriptor = NSSortDescriptor(key: "date", ascending: false)
         fetchRequest.sortDescriptors = [descriptor]
 //        fetchRequest.predicate = NSPredicate(format: "justification != nil")
-        do {
-            self.receiptList = try PersistenceService.persistentContainer.viewContext.fetch(fetchRequest)
-            
-            delegate?.receiptsFetched()
-        }catch{
-            print(error.localizedDescription as Any)
+        DispatchQueue.global().async {
+            do {
+                self.receiptList = try PersistenceService.persistentContainer.viewContext.fetch(fetchRequest)
+                DispatchQueue.main.async {
+                    self.delegate?.receiptsFetched()
+                }
+            }catch{
+                print(error.localizedDescription as Any)
+            }
         }
     }
     

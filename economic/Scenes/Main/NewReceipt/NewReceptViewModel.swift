@@ -33,7 +33,9 @@ class NewReceiptViewModel{
         receipt.totalValue = value.doubleValue
         receipt.currency = selectedCurrency.code
         receipt.details = description
-        receipt.imagePath = Utils.savePNGImage(image: image)
+        
+        let rotImage = Utils.fixRotation(image: self.image)
+        receipt.imagePath = Utils.savePNGImage(image: rotImage)
         
         PersistenceService.saveContext()
     }

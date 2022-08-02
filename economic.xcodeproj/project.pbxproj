@@ -27,6 +27,7 @@
 		AC2DF2812897491B00B1BFDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */; };
 		AC2DF28428974A9E00B1BFDB /* NewReceptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF28328974A9E00B1BFDB /* NewReceptViewModel.swift */; };
 		AC30CD4A28999E6100B94A34 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30CD4928999E6100B94A34 /* DetailsViewModel.swift */; };
+		AC30CD4D2899AB9000B94A34 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30CD4C2899AB9000B94A34 /* LoaderView.swift */; };
 		ACCA5133289826500090A866 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5132289826500090A866 /* Utils.swift */; };
 		ACCA513528984D470090A866 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513428984D470090A866 /* Currency.swift */; };
 		ACCA5137289899250090A866 /* ReceiptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5136289899250090A866 /* ReceiptType.swift */; };
@@ -78,6 +79,7 @@
 		AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		AC2DF28328974A9E00B1BFDB /* NewReceptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReceptViewModel.swift; sourceTree = "<group>"; };
 		AC30CD4928999E6100B94A34 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		AC30CD4C2899AB9000B94A34 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		ACCA5132289826500090A866 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ACCA513428984D470090A866 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		ACCA5136289899250090A866 /* ReceiptType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptType.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		AC2DF23F2896E00100B1BFDB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AC30CD4B2899AB8000B94A34 /* Extra */,
 				AC2DF2412896E03300B1BFDB /* Launch */,
 				AC2DF2402896E00A00B1BFDB /* Main */,
 			);
@@ -263,6 +266,14 @@
 				AC30CD4928999E6100B94A34 /* DetailsViewModel.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		AC30CD4B2899AB8000B94A34 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				AC30CD4C2899AB9000B94A34 /* LoaderView.swift */,
+			);
+			path = Extra;
 			sourceTree = "<group>";
 		};
 		ACCA51312898263D0090A866 /* Utils */ = {
@@ -417,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCA51402899655C0090A866 /* String+Extensions.swift in Sources */,
+				AC30CD4D2899AB9000B94A34 /* LoaderView.swift in Sources */,
 				AC2DF27D28970A7000B1BFDB /* AppCoordinator.swift in Sources */,
 				AC2DF2112896DB0E00B1BFDB /* MainViewController.swift in Sources */,
 				AC2DF20D2896DB0E00B1BFDB /* AppDelegate.swift in Sources */,

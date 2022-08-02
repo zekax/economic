@@ -13,15 +13,21 @@ class MainViewController: UIViewController{
     var viewModel: MainViewModel!
     var imagePicker:UIImagePickerController!
     @IBOutlet weak var tableView: UITableView!
+    private var loaderView: LoaderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         viewModel.delegate = self
+        loaderView = LoaderView(background: true, frame: view.frame)
+        loaderView.hideLoader()
+        self.view.addSubview(loaderView)
+        self.view.bringSubviewToFront(loaderView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        loaderView.showLoader()
         viewModel.fetchReceipts()
     }
 
@@ -32,12 +38,12 @@ class MainViewController: UIViewController{
             self.present(self.imagePicker, animated: true, completion: nil)
         }
     }
-    
 }
 
 extension MainViewController: ReceiptsDelegate{
     func receiptsFetched() {
         tableView.reloadData()
+        loaderView.hideLoader()
     }
 }
 
