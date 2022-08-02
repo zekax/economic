@@ -29,7 +29,7 @@ class NewReceiptViewModel{
         receipt.title = title
         receipt.date = date
         receipt.type = type
-        try? receipt.totalValue = Decimal(value, format: .number)
+        receipt.totalValue = NSDecimalNumber(string: value) 
         receipt.currency = selectedCurrency.code
         receipt.details = description
         receipt.imagePath = Utils.savePNGImage(image: image)

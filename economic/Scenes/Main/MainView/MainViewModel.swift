@@ -20,7 +20,6 @@ class MainViewModel{
     weak var delegate: ReceiptsDelegate?
     
     init(){
-        
     }
     
     func fetchReceipts(){
@@ -35,5 +34,9 @@ class MainViewModel{
         }catch{
             print(error.localizedDescription as Any)
         }
+    }
+    
+    func getReceipt(for row: Int) -> Receipt {
+        return self.receiptList[row]
     }
 }

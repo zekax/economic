@@ -2,7 +2,7 @@
 //  Receipt+CoreDataProperties.swift
 //  economic
 //
-//  Created by José Rodrigues on 31/07/2022.
+//  Created by José Rodrigues on 02/08/2022.
 //
 //
 
@@ -16,13 +16,13 @@ extension Receipt {
         return NSFetchRequest<Receipt>(entityName: "Receipt")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var details: String?
-    @NSManaged public var totalValue: Decimal
     @NSManaged public var currency: String?
     @NSManaged public var date: Date?
-    @NSManaged public var type: String?
+    @NSManaged public var details: String?
     @NSManaged public var imagePath: String?
+    @NSManaged public var title: String?
+    @NSManaged public var totalValue: NSDecimalNumber?
+    @NSManaged public var type: String?
 
 }
 

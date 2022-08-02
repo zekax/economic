@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shy-S2-t1S">
-                                                            <rect key="frame" x="344" y="35.5" width="42" height="21"/>
+                                                            <rect key="frame" x="344" y="35" width="42" height="53"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="ftn-5G-EER"/>
                                                             </constraints>
@@ -74,7 +74,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-4j-3Iz">
-                                                            <rect key="frame" x="8" y="35.5" width="33" height="21"/>
+                                                            <rect key="frame" x="8" y="35" width="33" height="53"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="h6o-kM-EXD"/>
                                                             </constraints>
@@ -86,13 +86,15 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="0Rt-hz-rxR" secondAttribute="trailing" constant="8" id="5Lt-1l-I1F"/>
-                                                        <constraint firstItem="Shy-S2-t1S" firstAttribute="centerY" secondItem="E3c-NJ-et0" secondAttribute="centerY" id="AGE-3a-h94"/>
-                                                        <constraint firstItem="nIT-4j-3Iz" firstAttribute="centerY" secondItem="E3c-NJ-et0" secondAttribute="centerY" id="Zig-bf-6KK"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Shy-S2-t1S" secondAttribute="bottom" constant="4" id="6g0-Mn-BQX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nIT-4j-3Iz" secondAttribute="bottom" constant="4" id="NcV-hI-nzC"/>
+                                                        <constraint firstItem="nIT-4j-3Iz" firstAttribute="top" secondItem="J5K-ST-vKQ" secondAttribute="bottom" constant="10" id="dvw-U8-id2"/>
                                                         <constraint firstAttribute="trailing" secondItem="Shy-S2-t1S" secondAttribute="trailing" constant="8" id="fNz-QX-YnI"/>
                                                         <constraint firstItem="nIT-4j-3Iz" firstAttribute="leading" secondItem="E3c-NJ-et0" secondAttribute="leading" constant="8" id="hRo-f9-XBd"/>
                                                         <constraint firstItem="J5K-ST-vKQ" firstAttribute="top" secondItem="E3c-NJ-et0" secondAttribute="top" constant="4" id="psr-bd-ZSi"/>
                                                         <constraint firstItem="J5K-ST-vKQ" firstAttribute="leading" secondItem="E3c-NJ-et0" secondAttribute="leading" constant="8" id="vBi-61-Oa1"/>
                                                         <constraint firstItem="0Rt-hz-rxR" firstAttribute="top" secondItem="E3c-NJ-et0" secondAttribute="top" constant="4" id="vtz-u1-H93"/>
+                                                        <constraint firstItem="Shy-S2-t1S" firstAttribute="top" secondItem="0Rt-hz-rxR" secondAttribute="bottom" constant="10" id="wDJ-B4-KHG"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -103,8 +105,18 @@
                                                 <constraint firstItem="E3c-NJ-et0" firstAttribute="top" secondItem="9hp-ML-dfS" secondAttribute="top" constant="4" id="sPT-RI-6tX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="J5K-ST-vKQ" id="k2L-Oq-VJA"/>
+                                            <outlet property="titleLabel" destination="nIT-4j-3Iz" id="3lW-q3-yj4"/>
+                                            <outlet property="typeLabel" destination="0Rt-hz-rxR" id="IRU-fB-3LT"/>
+                                            <outlet property="valueLabel" destination="Shy-S2-t1S" id="zwy-e8-5wo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lbw-mT-0cG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Dgd-te-AiZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

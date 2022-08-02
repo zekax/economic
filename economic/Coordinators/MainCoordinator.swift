@@ -17,6 +17,7 @@ class MainCoordinator: Coordinator{
     init(){
         navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         mainController = navigationController.viewControllers[0] as! MainViewController
+        mainController.viewModel = MainViewModel()
 //        navigationController = mainController.navigationController ?? UINavigationController()
     }
     

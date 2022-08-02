@@ -2,7 +2,7 @@
 //  Receipt+CoreDataClass.swift
 //  economic
 //
-//  Created by José Rodrigues on 31/07/2022.
+//  Created by José Rodrigues on 02/08/2022.
 //
 //
 

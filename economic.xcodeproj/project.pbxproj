@@ -19,8 +19,6 @@
 		AC2DF2472896E57100B1BFDB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2462896E57100B1BFDB /* UIView+Extensions.swift */; };
 		AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */; };
 		AC2DF24D2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24B2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld */; };
-		AC2DF2502896FAE200B1BFDB /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */; };
-		AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */; };
 		AC2DF2762897015A00B1BFDB /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2752897015900B1BFDB /* PersistenceService.swift */; };
 		AC2DF2792897061400B1BFDB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF2782897061400B1BFDB /* Coordinator.swift */; };
 		AC2DF27B2897082700B1BFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */; };
@@ -32,6 +30,8 @@
 		ACCA513528984D470090A866 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513428984D470090A866 /* Currency.swift */; };
 		ACCA5137289899250090A866 /* ReceiptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5136289899250090A866 /* ReceiptType.swift */; };
 		ACCA513A2898A89C0090A866 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51392898A89C0090A866 /* MainViewModel.swift */; };
+		ACCA513D2898B3270090A866 /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513B2898B3270090A866 /* Receipt+CoreDataClass.swift */; };
+		ACCA513E2898B3270090A866 /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513C2898B3270090A866 /* Receipt+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +68,6 @@
 		AC2DF2462896E57100B1BFDB /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		AC2DF24C2896F90000B1BFDB /* ReceiptsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptsModel.xcdatamodel; sourceTree = "<group>"; };
-		AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC2DF2752897015900B1BFDB /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		AC2DF2782897061400B1BFDB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC2DF27A2897082700B1BFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -81,6 +79,8 @@
 		ACCA513428984D470090A866 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		ACCA5136289899250090A866 /* ReceiptType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptType.swift; sourceTree = "<group>"; };
 		ACCA51392898A89C0090A866 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		ACCA513B2898B3270090A866 /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ACCA513C2898B3270090A866 /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +224,8 @@
 		AC2DF24A2896F8D600B1BFDB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				AC2DF24E2896FAE200B1BFDB /* Receipt+CoreDataClass.swift */,
-				AC2DF24F2896FAE200B1BFDB /* Receipt+CoreDataProperties.swift */,
+				ACCA513B2898B3270090A866 /* Receipt+CoreDataClass.swift */,
+				ACCA513C2898B3270090A866 /* Receipt+CoreDataProperties.swift */,
 				AC2DF24B2896F90000B1BFDB /* ReceiptsModel.xcdatamodeld */,
 				AC2DF2752897015900B1BFDB /* PersistenceService.swift */,
 			);
@@ -406,11 +406,11 @@
 				AC2DF2112896DB0E00B1BFDB /* MainViewController.swift in Sources */,
 				AC2DF20D2896DB0E00B1BFDB /* AppDelegate.swift in Sources */,
 				AC2DF2792897061400B1BFDB /* Coordinator.swift in Sources */,
-				AC2DF2502896FAE200B1BFDB /* Receipt+CoreDataClass.swift in Sources */,
+				ACCA513D2898B3270090A866 /* Receipt+CoreDataClass.swift in Sources */,
+				ACCA513E2898B3270090A866 /* Receipt+CoreDataProperties.swift in Sources */,
 				AC2DF2472896E57100B1BFDB /* UIView+Extensions.swift in Sources */,
 				AC2DF27B2897082700B1BFDB /* MainCoordinator.swift in Sources */,
 				ACCA5133289826500090A866 /* Utils.swift in Sources */,
-				AC2DF2512896FAE200B1BFDB /* Receipt+CoreDataProperties.swift in Sources */,
 				AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */,
 				AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */,
 				AC2DF27F289748F000B1BFDB /* NewReceiptViewController.swift in Sources */,
