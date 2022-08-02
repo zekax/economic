@@ -32,15 +32,10 @@ class economicTests: XCTestCase {
     }
     
     func testCurrency() throws {
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.locale = Locale.current
-        
-        print(currencyFormatter.currencyCode)
-        
-        print(currencyFormatter.currencySymbol)
-        
-        print(Currency.allCurrencies)
-        XCTAssertNotNil(currencyFormatter)
+        let euro =  Currency(name: "Euro", code: "EUR", symbol: "€")
+        XCTAssertNotNil(Currency.allCurrencies)
+        XCTAssertEqual(Currency.getSymbol(forCurrencyCode: "EUR"), "€")
+        XCTAssertEqual(Currency.getCurrency(forCurrencyCode: "EUR"), euro)
     }
 
     func testPerformanceExample() throws {

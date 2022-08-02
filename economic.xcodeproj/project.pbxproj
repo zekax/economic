@@ -30,6 +30,8 @@
 		AC2DF28428974A9E00B1BFDB /* NewReceptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF28328974A9E00B1BFDB /* NewReceptViewModel.swift */; };
 		ACCA5133289826500090A866 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5132289826500090A866 /* Utils.swift */; };
 		ACCA513528984D470090A866 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA513428984D470090A866 /* Currency.swift */; };
+		ACCA5137289899250090A866 /* ReceiptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5136289899250090A866 /* ReceiptType.swift */; };
+		ACCA513A2898A89C0090A866 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51392898A89C0090A866 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		AC2DF28328974A9E00B1BFDB /* NewReceptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReceptViewModel.swift; sourceTree = "<group>"; };
 		ACCA5132289826500090A866 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ACCA513428984D470090A866 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		ACCA5136289899250090A866 /* ReceiptType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptType.swift; sourceTree = "<group>"; };
+		ACCA51392898A89C0090A866 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,10 +170,9 @@
 		AC2DF2402896E00A00B1BFDB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				ACCA51382898A8790090A866 /* MainView */,
 				AC2DF28228974A7F00B1BFDB /* NewReceipt */,
-				AC2DF2102896DB0E00B1BFDB /* MainViewController.swift */,
 				AC2DF2122896DB0E00B1BFDB /* Main.storyboard */,
-				AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */,
 				AC2DF2802897491B00B1BFDB /* DetailsViewController.swift */,
 			);
 			path = Main;
@@ -253,8 +256,19 @@
 			children = (
 				ACCA5132289826500090A866 /* Utils.swift */,
 				ACCA513428984D470090A866 /* Currency.swift */,
+				ACCA5136289899250090A866 /* ReceiptType.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		ACCA51382898A8790090A866 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				AC2DF2102896DB0E00B1BFDB /* MainViewController.swift */,
+				AC2DF2482896E79400B1BFDB /* MainTableViewCell.swift */,
+				ACCA51392898A89C0090A866 /* MainViewModel.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +414,8 @@
 				AC2DF2492896E79400B1BFDB /* MainTableViewCell.swift in Sources */,
 				AC2DF20F2896DB0E00B1BFDB /* SceneDelegate.swift in Sources */,
 				AC2DF27F289748F000B1BFDB /* NewReceiptViewController.swift in Sources */,
+				ACCA5137289899250090A866 /* ReceiptType.swift in Sources */,
+				ACCA513A2898A89C0090A866 /* MainViewModel.swift in Sources */,
 				AC2DF28428974A9E00B1BFDB /* NewReceptViewModel.swift in Sources */,
 				ACCA513528984D470090A866 /* Currency.swift in Sources */,
 				AC2DF2812897491B00B1BFDB /* DetailsViewController.swift in Sources */,

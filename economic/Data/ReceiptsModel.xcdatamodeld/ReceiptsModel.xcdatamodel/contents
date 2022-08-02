@@ -6,7 +6,7 @@
         <attribute name="details" optional="YES" attributeType="String"/>
         <attribute name="imagePath" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="totalValue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalValue" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
     <elements>

@@ -23,18 +23,17 @@ class NewReceiptViewModel{
         self.image = image
     }
     
-    func createReceipt(title: String, date: Date, type:String, value:Double, currency: String, description:String, image: UIImage){
+    func createReceipt(title: String, type:String, value:String, description:String){
         let receipt = NSEntityDescription.insertNewObject(forEntityName: "Receipt", into: PersistenceService.persistentContainer.viewContext) as! Receipt
         
         receipt.title = title
         receipt.date = date
         receipt.type = type
-        receipt.totalValue = value
-        receipt.currency = currency
+        try? receipt.totalValue = Decimal(value, format: .number)
+        receipt.currency = selectedCurrency.code
         receipt.details = description
         receipt.imagePath = Utils.savePNGImage(image: image)
         
         PersistenceService.saveContext()
-        
     }
 }

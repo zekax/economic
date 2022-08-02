@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Currency {
+struct Currency: Equatable {
     let name: String
     let code: String
     let symbol: String
@@ -31,5 +31,10 @@ extension Currency {
     static func getSymbol(forCurrencyCode code: String) -> String? {
         let locale = NSLocale(localeIdentifier: code)
         return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
+    }
+    
+    static func getCurrency(forCurrencyCode code: String) -> Currency? {
+        let currency = allCurrencies.filter({$0.code == code})[0]
+        return currency
     }
 }

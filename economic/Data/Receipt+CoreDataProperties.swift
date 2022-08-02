@@ -18,7 +18,7 @@ extension Receipt {
 
     @NSManaged public var title: String?
     @NSManaged public var details: String?
-    @NSManaged public var totalValue: Double
+    @NSManaged public var totalValue: Decimal
     @NSManaged public var currency: String?
     @NSManaged public var date: Date?
     @NSManaged public var type: String?

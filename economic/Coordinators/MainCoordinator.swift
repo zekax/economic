@@ -34,4 +34,8 @@ class MainCoordinator: Coordinator{
         
     }
     
+    func exit(vc: UIViewController){
+        vc.navigationController?.popViewController(animated: true)
+    }
+    
 }

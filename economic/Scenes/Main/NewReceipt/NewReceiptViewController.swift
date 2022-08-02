@@ -7,15 +7,6 @@
 
 import UIKit
 
-enum receiptType: String, CaseIterable{
-    case none = "None"
-    case travel = "Travel"
-    case shopping = "Shopping"
-    case groceries = "Groceries"
-    case other = "Other"
-    
-}
-
 class NewReceiptViewController: UIViewController {
 
     var viewModel: NewReceiptViewModel!
@@ -100,6 +91,11 @@ class NewReceiptViewController: UIViewController {
     }
     
     @IBAction func touchSaveButton(_ sender: Any) {
+        
+        //TODO: check empty title and show alert
+        viewModel.createReceipt(title: titleTxtFld.text ?? String(), type: typeTxtFld.text!, value: valueTxtFld.text ?? String(), description: descriptionTxtFld.text)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func keyboardNotification(notification: Notification) {
