@@ -10,7 +10,7 @@ import UIKit
 class NewReceiptViewController: UIViewController {
 
     var viewModel: NewReceiptViewModel!
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: MainCoordinator!
     
     @IBOutlet weak var capturedImage: UIImageView!
     @IBOutlet weak var titleTxtFld: UITextField!

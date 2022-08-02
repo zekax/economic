@@ -39,4 +39,13 @@ class MainViewModel{
     func getReceipt(for row: Int) -> Receipt {
         return self.receiptList[row]
     }
+    
+    
+    func getcCurrencyValue(from value: Double, with currency: String?) -> String{
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = currency
+        
+        return formatter.string(from: value as NSNumber) ?? "N/A"
+    }
 }

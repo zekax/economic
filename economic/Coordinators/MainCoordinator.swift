@@ -18,7 +18,6 @@ class MainCoordinator: Coordinator{
         navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         mainController = navigationController.viewControllers[0] as! MainViewController
         mainController.viewModel = MainViewModel()
-//        navigationController = mainController.navigationController ?? UINavigationController()
     }
     
     func start() {
@@ -31,12 +30,10 @@ class MainCoordinator: Coordinator{
         navigationController.pushViewController(newvc, animated: true)
     }
     
-    func navigateToDetails(){
-        
-    }
-    
-    func exit(vc: UIViewController){
-        vc.navigationController?.popViewController(animated: true)
+    func navigateToDetails(receipt: Receipt){
+        let newvc = storyboard.instantiateViewController(withIdentifier: "ReceiptDetails") as! DetailsViewController
+        newvc.viewModel = DetailsViewModel(receipt: receipt)
+        navigationController.pushViewController(newvc, animated: true)
     }
     
 }

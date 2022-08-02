@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController{
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: MainCoordinator!
     var viewModel: MainViewModel!
     var imagePicker:UIImagePickerController!
     @IBOutlet weak var tableView: UITableView!
@@ -60,17 +60,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "receiptlistcell", for: indexPath) as! MainTableViewCell
         
         let receipt = viewModel.getReceipt(for: indexPath.row)
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = receipt.currency
         
         cell.titleLabel.text = receipt.title
         cell.dateLabel.text = receipt.date?.formatted(date: .numeric, time: .shortened)
         cell.typeLabel.text = receipt.type
-        cell.valueLabel.text = formatter.string(from: receipt.totalValue as NSNumber) //(receipt.totalValue.description) + receipt.currency!
+        cell.valueLabel.text = viewModel.getcCurrencyValue(from: receipt.totalValue, with: receipt.currency)
         
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let receipt = viewModel.getReceipt(for: indexPath.row)
+        coordinator.navigateToDetails(receipt: receipt)
+    }
 }
